@@ -1,0 +1,219 @@
+.page-header {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.voluntario-section {
+  padding: 1rem 0 5rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.voluntario-card {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 0.9px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #00745a;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+}
+
+.formulario-section {
+  background-color: #00745a;
+  padding: 5rem 0;
+}
+
+.formulario {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00745a;
+    text-align: center;
+  }
+}
+
+.campoPreencher {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+}
+
+.inputsRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-direction: row;
+}
+
+.input,
+.inputFull,
+.textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.input {
+  flex: none;
+  width: 100%;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.infoText {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.submitButton {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #00745a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken(#00745a, 10%);
+  }
+}
+
+/* --- Responsividade (max-width: 900px) --- */
+
+@media (max-width: 900px) {
+  .page-header,
+  .voluntario-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .voluntario-card {
+    flex: none;
+    width: 83%;
+    padding: 2rem 1.5rem;
+  }
+
+  .formulario-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .formulario {
+    padding: 2rem;
+    h2 {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+/* --- Responsividade (max-width: 600px) --- */
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .inputsRow {
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: auto;
+  }
+
+  .input {
+    flex: 1;
+  }
+
+  .page-header,
+  .voluntario-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .formulario {
+    padding: 1.5rem 1rem;
+  }
+
+  .submitButton {
+    width: 50%;
+    font-size: 1rem;
+  }
+}

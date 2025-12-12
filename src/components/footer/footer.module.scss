@@ -1,0 +1,163 @@
+.footer {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  padding-top: 2rem;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    img {
+      padding: 0 0 1.5rem;
+    }
+  }
+
+  .icon {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0.3rem;
+    // // justify-content: space-between;
+    // align-items: center;
+  }
+}
+
+.footerColuna {
+  // flex-basis: 32%;
+  // flex-grow: 1;
+  // flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ffffff;
+    font-weight: 200;
+    margin-bottom: auto;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      font-weight: 200;
+    }
+  }
+}
+
+.footerBotton {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ffffff;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding-top: 2rem;
+  }
+
+  .footerContent {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    width: auto;
+    // max-width: 100%;
+  }
+  .footerColuna:nth-child(1),
+  .footerColuna:nth-child(2) {
+    flex: 1 1 40%;
+    width: auto;
+    // text-align: left;
+  }
+  .footerColuna:nth-child(3) {
+    flex: 1 1 100%;
+    text-align: left;
+    margin-top: 0;
+  }
+  .footerColuna {
+    // flex: none;
+    width: auto;
+    padding: 1rem 0 0 1rem;
+    .icon {
+      justify-content: space-between;
+      align-items: center;
+    }
+    h3 {
+      font-size: 0.8rem;
+      padding: 0 1rem;
+      margin-top: 0;
+    }
+    p {
+      font-size: 0.6rem;
+      margin-top: 0;
+      padding: 0 1rem;
+    }
+    ul {
+      padding: 0 1rem;
+
+      li {
+        font-size: 0.6rem;
+        align-items: center;
+        padding: 0;
+      }
+    }
+  }
+
+  .logoContainer {
+    justify-content: left;
+    h3 {
+      padding: 0;
+    }
+  }
+
+  .footerBotton {
+    padding: 1rem 1.5rem;
+
+    p {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 3rem;
+  }
+  .footerContent {
+    padding: 0 1rem 1rem 1rem;
+  }
+}

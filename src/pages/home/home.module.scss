@@ -1,0 +1,324 @@
+.hero {
+  padding: 4rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  .content {
+    max-width: 450px;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 1.5rem 0;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .text {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.hero-estetoscopio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e5e5e5;
+  color: #000000;
+  border-radius: 20px;
+  padding: 1rem 1.3rem;
+  width: fit-content;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.boxButton {
+  display: flex;
+  gap: 1rem;
+  a {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #00745a;
+    color: white;
+    font-weight: 500;
+    &:hover {
+      background-color: #02634c;
+    }
+    &:nth-child(2) {
+      background-color: white;
+      color: #00745a;
+      border: 2px solid #00745a;
+      &:hover {
+        background-color: #f0f0f0;
+        border-color: #02634c;
+        color: #02634c;
+      }
+    }
+  }
+}
+
+.heroImg {
+  img {
+    border-radius: 12px;
+  }
+}
+
+/* --- HERO SECTION - Responsividade --- */
+
+// Tablet (max-width: 900px) - Empilha e centraliza
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem 3rem;
+    text-align: center;
+    // gap: 1.5rem;
+
+    .content {
+      max-width: 100%;
+    }
+
+    .heroImg {
+      img {
+        display: none;
+      }
+    }
+
+    .hero-estetoscopio {
+      margin-inline: auto;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .boxButton {
+      justify-content: center;
+    }
+  }
+}
+
+// Celular (max-width: 600px) - Refinamento e empilhamento dos botões
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 1rem;
+
+    .content {
+      h1 {
+        font-size: 3rem;
+        text-shadow: none;
+      }
+      .text {
+        font-size: 1.2rem;
+        font-weight: 300;
+        align-items: center;
+      }
+    }
+
+    .boxButton {
+      flex-direction: column;
+      cursor: pointer;
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.missao {
+  background-color: #00745a;
+  padding: 4rem 6rem;
+  color: #ffffff;
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-weight: 200;
+  }
+  .missaoText {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 200;
+  }
+}
+
+.missao-cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.missaoCard {
+  background-color: #00745a;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  padding: 0.3rem;
+  width: 27vw;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  &:hover {
+    transform: translateY(-5px); /* Efeito de 'levantar' */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para a elevação */
+    border-color: #a8d5b1; /*Ilumina a borda */
+  }
+}
+
+/* --- MISSÃO SECTION - Responsividade --- */
+
+@media (max-width: 900px) {
+  .missao {
+    padding: 3rem 3rem;
+    text-align: center;
+    h2 {
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 1rem;
+      width: 90%;
+      font-weight: 400;
+    }
+    .missaoText {
+      font-size: 1rem;
+      width: 90%;
+    }
+  }
+
+  .missao-cards-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .missaoCard {
+    width: 85%;
+    height: auto;
+    padding: 1.5rem;
+    // align-items: center;
+
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// Celular (max-width: 600px)
+@media (max-width: 600px) {
+  .missao {
+    padding: 3rem 1rem;
+  }
+}
+
+.impacto {
+  background-color: #ffffff;
+  padding: 4rem 6rem;
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+}
+.impacto-cards-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.impactoCard {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  padding: 3rem;
+  width: 25vw;
+  height: 25vh;
+  align-items: center;
+  justify-content: space-evenly;
+
+  text-align: center;
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #00745a;
+    text-align: center;
+  }
+  .impactoText {
+    font-size: 0.7rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  &:hover {
+    border-color: #00745a; /* A cor da borda muda para verde (primária) */
+    box-shadow: 0 0 10px rgba(0, 116, 90, 0.3); /* Sombra verde suave */
+  }
+}
+
+/* --- IMPACTO SECTION - Responsividade --- */
+
+@media (max-width: 900px) {
+  .impacto {
+    padding: 3rem 3rem;
+    text-align: center;
+  }
+  .impacto-cards-container {
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  .impactoCard {
+    width: calc(50% - 0.5rem);
+    padding: 2rem 1rem;
+
+    h3 {
+      font-size: 3rem;
+      margin-top: 2rem;
+    }
+  }
+}
+
+// Celular (max-width: 600px) - Uma coluna
+@media (max-width: 600px) {
+  .impacto {
+    padding: 3rem 1rem;
+  }
+  .impacto-cards-container {
+    flex-direction: column;
+  }
+  .impactoCard {
+    width: 60%;
+    align-items: center;
+  }
+}
