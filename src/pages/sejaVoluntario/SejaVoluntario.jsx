@@ -18,7 +18,7 @@ const [formData, setFormData] = useState({
     e.preventDefault();
 
     try {
-      const response = await fetch("https://one-desafio-backend.onrender.com", {
+      const response = await fetch("https://one-desafio-backend.onrender.com/cadastros", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
