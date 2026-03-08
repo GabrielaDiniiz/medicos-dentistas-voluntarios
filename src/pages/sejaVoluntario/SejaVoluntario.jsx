@@ -94,7 +94,7 @@ const [formData, setFormData] = useState({
             </div>
             <input
               type="tel"
-              name="name"
+              name="telefone"
               value={formData.telefone}
                 onChange={handleChange}
               placeholder="Seu Telefone *"
