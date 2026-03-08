@@ -68,7 +68,7 @@ const [formData, setFormData] = useState({
       </section>
 
       <section className={S["formulario-section"]}>
-        <form className={S.formulario} onSubmite={handlSubmit}>
+        <form className={S.formulario} onSubmit={handleSubmit}>
           <h2>Inscrição para Voluntários</h2>
 
           <div className={S.campoPreencher}>
