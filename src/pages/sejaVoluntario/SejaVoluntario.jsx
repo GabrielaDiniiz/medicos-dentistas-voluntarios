@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import S from "./sejaVoluntario.module.scss";
 
 export default function SejaVoluntario() {
+    const [isSubmitting, setIsSubmitting] = useState(false)
 const [formData, setFormData] = useState({
     nome: "",
     email: "",
@@ -16,13 +17,12 @@ const [formData, setFormData] = useState({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+      setIsSubmitting(true);
 
     try {
       const response = await fetch("https://one-desafio-backend.onrender.com/cadastros", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify(formData),
       });
 
@@ -31,12 +31,13 @@ const [formData, setFormData] = useState({
         // Limpa o formulário após o envio
         setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
       } else {
-        alert("Erro ao enviar inscrição. Verifique o servidor.");
+        alert("Erro ao enviar inscrição. Verifique o formulário.");
       }
     } catch (error) {
       console.error("Erro de conexão:", error);
       alert("Não foi possível conectar ao servidor.");
     }
+      finally {setIsSubmitting(false);
   };
   
   return (
@@ -118,7 +119,13 @@ const [formData, setFormData] = useState({
           <p className={S.infoText}>
             Entraremos em contato para mais informações
           </p>
-          <button type="submit" className={S.submitButton}>Enviar Inscrição</button>
+          <button type="submit" 
+              className={S.submitButton} 
+              disabled={isSubmitting}
+             style={{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}
+>
+  {isSubmitting ? "Aguarde, conectando ao servidor..." : "Enviar Inscrição"}
+          </button>
         </form>
       </section>
     </main>
